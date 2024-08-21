@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{objTema.nombreTema }}
+{% endblock %}
+{% block contenido %}
+    <h2>Articulos por tema</h2>
+    <div>
+        <h4>{{ objTema.descripcionTema }}</h4>
+    </div> 
+    <br>
+    {% for art in listaArticulos %}
+        <div>
+           <a href="{% url 'wikiApp:contenido' art.id %}">{{ art.tituloArticulo }}</a> 
+        </div>
+    {% endfor %}
+{% endblock %}
+
+<!--Ruta: articulotema/id-->

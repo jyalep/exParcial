@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Nuevo tema
+{% endblock %}
+
+{% block contenido %}
+    <h2>Nuevo Tema</h2>
+    <form method="post" action="{% url 'wikiApp:nuevoTema' %}">
+        {% csrf_token %}
+        <div>
+            <label>Ingrese el nombre del tema</label>
+        </div>
+        <div>
+            <input type="text" name="nombreTema">
+        </div>
+        <div>
+            <label>Ingrese la descripcion del tema</label>
+        </div>
+        <div>
+            <input type="text" name="descripcionTema">
+        </div>
+        <div>
+            <input type="submit" value="Enviar" style="margin-top: 10px;">
+        </div>
+    </form>
+{% endblock %}
+
+<!--Ruta: nuevotema-->

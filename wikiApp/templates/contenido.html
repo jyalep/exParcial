@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ objArticulo.tituloArticulo }}
+{% endblock %}
+
+{% block contenido %}
+    <h1>{{ objArticulo.tituloArticulo }}</h1>
+    <br>
+    <div>
+        <h4>{{ objArticulo.Articulo }}</h4>
+    </div>
+
+{% endblock %}
+
+<!--Ruta: contenido/id-->

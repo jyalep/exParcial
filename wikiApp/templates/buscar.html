@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Busqueda
+{% endblock %}
+
+{% block contenido %}
+    {% if post %}
+    <h2>Resultados encontrado</h2>
+    <br>
+    {% for art in post %}
+    <div>
+        <a href="{% url 'wikiApp:contenido' art.id %}">{{ art.tituloArticulo }}</a> 
+    </div>
+    {% endfor %}
+        {% else %}
+        <h1>No se encontro nada</h1>
+    {% endif %}
+{% endblock %}
+<!--Ruta: busqueda-->

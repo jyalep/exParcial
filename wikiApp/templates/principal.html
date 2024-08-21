@@ -1,0 +1,18 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Principal
+{% endblock %}
+{% block contenido %}
+    <div>
+        <h2>Articulos</h2>
+    </div>
+    {% for art in listaTitulos %}
+        <div>
+           <a href="{% url 'wikiApp:contenido' art.id %}">{{ art.tituloArticulo }}</a> 
+        </div>
+    {% endfor %}
+{% endblock %}
+
+<!--Ruta: vacia-->
